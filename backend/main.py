@@ -77,7 +77,7 @@ class DailyLogResponse(BaseModel):
     total_patients: int 
     total_revenue: float
     total_expenses: float
-    profit: float
+    profit: float   
     notes: Optional[str]
     diseases: List[DiseaseCreate]
 
