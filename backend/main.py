@@ -74,7 +74,7 @@ class DailyLogCreate(BaseModel):
 class DailyLogResponse(BaseModel):
     id: int
     date: date
-    total_patients: int
+    total_patients: int 
     total_revenue: float
     total_expenses: float
     profit: float
