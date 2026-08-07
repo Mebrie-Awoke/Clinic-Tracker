@@ -261,7 +261,7 @@ async function handleInventorySubmit(event) {
     showMessage(error.message, 'error');
   }
 }
-
+ 
 function parseDiseases(value) {
   return value
     .split('\n')

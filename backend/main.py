@@ -80,10 +80,9 @@ class DailyLogResponse(BaseModel):
     profit: float
     notes: Optional[str]
     diseases: List[DiseaseCreate]
-    
+
     class Config:
         from_attributes = True  
-
 class InventoryCreate(BaseModel):
     drug_name: str
     quantity_in_stock: int
@@ -91,7 +90,6 @@ class InventoryCreate(BaseModel):
     unit_cost: float = 0.0
     selling_price: float = 0.0
     expiry_date: Optional[date] = None
-
 class InventoryResponse(BaseModel):
     id: int
     drug_name: str
@@ -125,7 +123,7 @@ def get_db():
         db.close()
 
 # ============= FASTAPI APP =============
-app = FastAPI(title="Wereda Clinic Tracker", version="1.0.0")
+app = FastAPI(title="Clinic Tracker", version="1.0.0")
 
 # CORS - allows React to connect
 app.add_middleware(
@@ -187,7 +185,6 @@ def get_daily_logs(start_date: Optional[date] = None, end_date: Optional[date] =
     
     logs = query.order_by(DailyLog.date.desc()).all()
     
-    # Format response with diseases
     result = []
     for log in logs:
         diseases = [{"disease_name": d.disease_name, "case_count": d.case_count} for d in log.diseases]
@@ -341,7 +338,6 @@ def get_dashboard_summary(db: Session = Depends(get_db)):
                 "current_stock": item.quantity_in_stock,
                 "reorder_level": item.reorder_level
             })
-    
     return {
         "total_patients_month": total_patients_month,
         "total_revenue_month": total_revenue_month,

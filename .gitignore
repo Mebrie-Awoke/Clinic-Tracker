@@ -1,6 +1,3 @@
-backend/venv/
-backend/__pycache__/
-backend/*.pyc
-Frontend/node_modules
-Frontend/dist
-Frontend/.env
+_pycache_
+venv
+clinic_data.db
