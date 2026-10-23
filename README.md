@@ -59,6 +59,6 @@ All API routes are prefixed with `/api`.
 | `GET` | `/dashboard/summary` | Get dashboard totals, top diseases, and stock alerts |
 | `GET` | `/dashboard/monthly-trends` | Get monthly totals for the previous year |
 
-## Data and Limitations
+## Data and Limitations  
 
 The SQLite database is created automatically when the backend starts. Keep `backend/clinic_data.db` to retain records; back it up separately if the data matters. The application does not currently include authentication, user accounts, or a production deployment configuration, so it should be treated as a local/demo system rather than exposed to an untrusted network.
