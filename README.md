@@ -3,7 +3,7 @@
 A lightweight clinic operations dashboard for recording daily activity and finances, monitoring medicine stock, and viewing summaries. The frontend is plain HTML, CSS, and JavaScript; the API is built with FastAPI and stores data in a local SQLite database.
 
 ## Features    
-
+  
 - Record one daily log per date, including patient count, revenue, expenses, notes, and disease case counts.
 - Review and delete daily logs, with profit calculated as revenue minus expenses.
 - Maintain medicine inventory, adjust stock, and remove items. Inventory status is `Critical` at zero stock, `Low` at or below the reorder level, and `Good` above it.
