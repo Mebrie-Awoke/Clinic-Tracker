@@ -8,7 +8,7 @@ from datetime import datetime, date
 from typing import List, Optional
 import pandas as pd
 from io import BytesIO
-   
+      
 # ============= DATABASE SETUP =============
 SQLALCHEMY_DATABASE_URL = "sqlite:///./clinic_data.db"
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
